@@ -1,0 +1,931 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    color: #ffffff;
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    background: #1d1d1f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+body.overflow {
+    overflow: hidden
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+input, button {
+    font-family: Inter, Arial, sans-serif
+}
+
+a {
+    color: unset;
+    text-decoration: unset
+}
+
+.container {
+    max-width: 1475px;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto
+}
+
+.header, .footer {
+    background: #131313;
+    height: 74px
+}
+
+.header .container, .footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.header .logo, .footer .logo {
+    width: 150px;
+    height: 36px
+}
+
+.header .button, .footer .button {
+    background: #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 24px;
+    border: none;
+    color: #000000;
+    cursor:rgb(0, 0, 0)r;
+    transition: background-color .25s
+}
+
+.header .button:hover, .footer .button:hover {
+    background-color: #aaaaaa
+}
+
+.header .button:not(:last-child), .footer .button:not(:last-child) {
+    margin-right: 10px
+}
+
+.header {
+    border-bottom: 2px solid #131313
+}
+
+.footer {
+    border-top: 2px solid #131313
+}
+
+.main {
+    flex: 1
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    margin-top: 100px
+}
+
+.top-tag {
+    background: rgb(0 0 0 / 12%);;
+    border-radius: 66px;
+    padding: 10px 26px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    margin-bottom: 16px
+}
+
+.top-title {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 82px;
+    color: #ffffff;
+    font-family: gilroy, Arial, sans-serif
+}
+
+.top-title .rocket {
+    height: 70px;
+    display: inline-block;
+    vertical-align: center
+}
+
+.top-title span:nth-child(2), .top-title span:nth-child(3) {
+    color: #777777
+}
+
+.top-title span:nth-child(4) {
+    background: #000000;
+    color: #fff;
+    border-radius: 16px;
+    padding: 0 20px
+}
+
+.top-subtitle {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 40px;
+    color: #ffffff;
+    margin: 22px 0 30px
+}
+
+.top-buttons {
+    display: flex;
+    align-items: center
+}
+
+.top-button {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 19px 36px;
+    transition: background-color .25s;
+    border: none;
+    cursor: pointer
+}
+
+.top-button.moreinfo {
+    background: #000000;;
+    box-shadow: 0 12px 68px -12px rgb(0 0 0 / 64%);
+    border-radius: 16px;
+    color: #ffffff
+}
+
+.top-button.moreinfo:hover {
+    background-color: #2a2a2a
+}
+
+.top-button.participate {
+    background: #000000;;
+    box-shadow: 0 12px 68px -12px rgb(0 0 0 / 64%);
+    border-radius: 16px;
+    color: #ffffff
+}
+
+.top-button.participate:hover {
+    background-color: #2a2a2a
+}
+
+.top-button:not(:last-child) {
+    margin-right: 16px
+}
+
+.info {
+    background: #121212;
+    border-radius: 36px;
+    margin-top: 128px
+}
+
+.info-header {
+    background: #161616;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 36px
+}
+
+.info-header_item {
+    display: flex;
+    align-items: center
+}
+
+.info-header_icon {
+    background: rgb(88 88 88 / 12%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    min-height: 64px;
+    width: 64px;
+    height: 64px
+}
+
+.info-header_data {
+    margin-left: 20px
+}
+
+.info-header_data p:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: .06em;
+    color: rgb(255 255 255);
+    text-transform: uppercase
+}
+
+.info-header_data p:nth-child(2) {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 4px
+}
+
+.info-content {
+    display: flex;
+    padding: 36px
+}
+
+.info-content_col {
+    width: 100%
+}
+
+.info-content_col:not(:last-child) {
+    margin-right: 48px
+}
+
+.info-content_title {
+    background: rgb(88 88 88 / 12%);;
+    border-radius: 66px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 10px 26px;
+    display: inline-block
+}
+
+.info-content_text {
+    font-size: 17px;
+    line-height: 36px;
+    color: #ffffff;
+    margin-top: 12px
+}
+
+.info-content_text span {
+    color: #727272
+}
+
+.info-replenishment {
+    display: flex;
+    align-items: center;
+    background: #161616;
+    border-radius: 36px;
+    padding: 36px
+}
+
+.info-replenishment_col {
+    width: 50%;
+    display: flex;
+    flex-direction: column
+}
+
+.info-replenishment_header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between
+}
+
+.info-replenishment_title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px
+}
+
+.info-replenishment_subtitle {
+    font-size: 20px;
+    line-height: 32px;
+    color: #ffffff;
+    margin-top: 4px
+}
+
+.info-replenishment_data {
+    margin-right: 30px
+}
+
+.info-replenishment_qr {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    min-height: 140px;
+    border-radius: 2px
+}
+
+.info-replenishment_line {
+    border: none;
+    height: 226px;
+    width: 2px;
+    background: #000000;
+    margin: 0 36px
+}
+
+.info-replenishment_address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    border-radius: 8px;
+    height: 38px;
+    padding: 0 12px 0 16px;
+    margin-top: 24px
+}
+
+.info-replenishment_address p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.info-replenishment_address button {
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    transition: transform .25s
+}
+
+.info-replenishment_address button:hover {
+    transform: scale(1.1)
+}
+
+.transactions {
+    margin: 50px 0;
+    background: #121212;
+    border-radius: 36px;
+    overflow-x: auto
+}
+
+.transactions-header {
+    background: #161616;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 36px;
+    min-width: 1000px
+}
+
+.transactions-header p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px
+}
+
+.transactions-body {
+    padding: 24px 36px;
+    min-width: 1000px
+}
+
+.transactions-item {
+    display: flex;
+    justify-content: space-between
+}
+
+.transactions-item:not(:last-child) {
+    border-bottom: 1px solid #202020;
+    padding-bottom: 24px;
+    margin-bottom: 24px
+}
+
+.transactions-item p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff
+}
+
+.transactions-item .apply {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.transactions .txhash {
+    max-width: 137px;
+    width: 137px
+}
+
+.transactions .block {
+    max-width: 80px;
+    width: 80px
+}
+
+.transactions .from {
+    max-width: 100px;
+    width: 100px
+}
+
+.transactions .to {
+    max-width: 100px;
+    width: 100px
+}
+
+.transactions .time {
+    max-width: 85px;
+    width: 85px
+}
+
+.transactions .value {
+    max-width: 110px;
+    width: 110px
+}
+
+.transactions .fee {
+    max-width: 110px;
+    width: 110px
+}
+
+.modal {
+    background: rgba(0, 0, 0, .64);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    display: none;
+    justify-content: center
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: flex-start;
+    height: 95vh;
+    margin-bottom: auto;
+    overflow: auto;
+    margin-top: 20px
+}
+
+.modal-content {
+    padding: 24px 48px;
+    background: #F1F1F1;
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%
+}
+
+.modal-close {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F1F1F1;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    margin-left: 11px
+}
+
+.modal-line {
+    height: 2px;
+    width: 100%;
+    border: none;
+    background: #d9d9d9;
+    margin: 24px 0
+}
+
+.modal-amount {
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    padding: 12px 16px
+}
+
+.modal-amount.btc .modal-amount_query button, .modal-amount.btc .modal-amount_coin > p {
+    color: #291af7
+}
+
+.modal-amount.btc .modal-amount_coin svg path {
+    fill: #291af7
+}
+
+.modal-amount.btc .modal-amount_exchange path {
+    fill: #ffffff
+}
+
+.modal-amount.ada .modal-amount_query button, .modal-amount.ada .modal-amount_coin > p {
+    color: #0E0E0F
+}
+
+.modal-amount.ada .modal-amount_coin svg path {
+    fill: #0E0E0F
+}
+
+.modal-amount.ada .modal-amount_exchange path {
+    fill: #0E0E0F
+}
+
+.modal-amount_title {
+    font-size: 18px;
+    line-height: 22px;
+    color: #5a5c73;
+    margin-bottom: 12px
+}
+
+.modal-amount_exchange {
+    margin-top: -12px;
+    margin-bottom: -12px;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
+.modal-amount_exchange svg {
+    height: 100%
+}
+
+.modal-amount_input {
+    border-bottom: 2px solid #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3px;
+    position: relative
+}
+
+.modal-amount_input input {
+    font-size: 28px;
+    line-height: 34px;
+    color: #0E0E0F;
+    background: 0 0;
+    border: none;
+    width: 100%;
+    padding-right: 90px
+}
+
+.modal-amount_select {
+    background: #d9d9d9;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    line-height: 27px;
+    padding: 8px 10px;
+    bottom: -50px;
+    display: none;
+    cursor: pointer
+}
+
+.modal-amount_coin {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0
+}
+
+.modal-amount_coin > p {
+    font-size: 28px;
+    line-height: 34px
+}
+
+.modal-amount_coin svg {
+    margin-left: 9px
+}
+
+.modal-amount_query {
+    display: flex;
+    margin-top: 5px
+}
+
+.modal-amount_query button {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 1px 6px;
+    background: rgba(30, 26, 247, 0.08);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer
+}
+
+.modal-amount_query button:not(:last-child) {
+    margin-right: 4px
+}
+
+.modal-address:not(:last-child) {
+    margin-bottom: 32px
+}
+
+.modal-address_header {
+    display: flex;
+    flex: 1
+}
+
+.modal-address_title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px
+}
+
+.modal-address_subtitle {
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    margin-top: 4px
+}
+
+.modal-address_data {
+    margin-right: 30px
+}
+
+.modal-address_qr {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    min-height: 140px;
+    border-radius: 8px
+}
+
+.modal-address_address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 2px solid #d9d9d9;
+    border-radius: 8px;
+    height: 38px;
+    padding: 0 12px 0 16px;
+    margin-top: 24px
+}
+
+.modal-address_address p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.modal-address_address button {
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    transition: transform .25s
+}
+
+.modal-address_address button:hover {
+    transform: scale(1.1)
+}
+
+@media (max-width: 1400px) {
+    .top-creator {
+        width: 600px
+    }
+}
+
+@media (max-width: 1200px) {
+    .info-replenishment_col {
+        width: 100%;
+    }
+
+    .top-creator {
+        display: none
+    }
+
+    .info-header {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .info-header_item {
+        width: 300px;
+        margin: 10px
+    }
+
+    .info-replenishment {
+        flex-direction: column
+    }
+
+    .info-replenishment_line {
+        height: 2px;
+        width: 100%;
+        margin: 24px 0
+    }
+
+    .info-content {
+        flex-direction: column
+    }
+
+    .info-content_col:not(:last-child) {
+        margin: 0 0 24px
+    }
+}
+
+@media (max-width: 1050px) {
+    .transactions-item p, .transactions-header p {
+        font-size: 16px
+    }
+}
+
+@media (max-width: 700px) {
+    .modal-content {
+        max-width: 500px;
+        padding: 24px
+    }
+
+    .modal-address_title {
+        font-size: 22px;
+        line-height: 1.5
+    }
+
+    .modal-address_subtitle {
+        font-size: 18px;
+        line-height: 1.5
+    }
+
+    .top-title {
+        font-size: 42px;
+        line-height: 1.4
+    }
+
+    .top-title .rocket {
+        height: 50px
+    }
+
+    .top-button {
+        font-size: 20px;
+        padding: 15px 30px
+    }
+
+    .header {
+        height: auto;
+        padding: 10px 0
+    }
+
+    .header .container {
+        flex-direction: column
+    }
+
+    .header-nav {
+        margin-top: 10px
+    }
+}
+
+@media (max-width: 600px) {
+    .info-replenishment_header {
+        flex-direction: column-reverse
+    }
+
+    .info-replenishment_data {
+        margin: 20px 0 0
+    }
+
+    .info-replenishment_subtitle span {
+        display: none
+    }
+
+    .modal-content {
+        max-width: 400px
+    }
+
+    .modal-amount {
+        flex-direction: column
+    }
+
+    .modal-amount_col {
+        width: 100%
+    }
+
+    .modal-amount_col:not(:last-child) {
+        margin-bottom: 20px
+    }
+
+    .modal-amount_exchange {
+        display: none
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-dialog {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        max-width: 90%;
+        margin-bottom: auto
+    }
+
+    .modal-content {
+        max-width: 100%;
+        width: 100%
+    }
+
+    .modal-close {
+        margin: 0 0 10px
+    }
+}
+
+@media (max-width: 460px) {
+    .header-nav {
+        width: 100%
+    }
+
+    .header-nav .button {
+        display: block;
+        width: 100%;
+        text-align: center
+    }
+
+    .header-nav .button:not(:last-child) {
+        margin-bottom: 10px
+    }
+}
+
+@media (max-width: 450px) {
+    .modal-address_header {
+        flex-direction: column-reverse
+    }
+
+    .modal-address_qr {
+        margin-bottom: 15px
+    }
+
+    .top {
+        margin-top: 50px
+    }
+
+    .info {
+        margin-top: 80px
+    }
+
+    .info-header {
+        justify-content: flex-start;
+        padding: 26px 15px
+    }
+
+    .info-content {
+        padding: 20px 15px
+    }
+
+    .info-replenishment {
+        padding: 20px 15px
+    }
+}
+
+@media (max-width: 400px) {
+    .top-title {
+        font-size: 32px
+    }
+
+    .top-title .rocket {
+        height: 35px
+    }
+
+    .top-subtitle {
+        font-size: 18px;
+        line-height: 2
+    }
+
+    .top-tag {
+        font-size: 16px;
+        padding: 10px 20px
+    }
+
+    .top-buttons {
+        flex-direction: column
+    }
+
+    .top-button {
+        width: 100%
+    }
+
+    .top-button:not(:last-child) {
+        margin: 0 0 15px
+    }
+}
+/*
+     FILE ARCHIVED ON 21:31:25 Sep 20, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:41:12 Apr 13, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 106.329
+  exclusion.robots: 0.06
+  exclusion.robots.policy: 0.052
+  RedisCDXSource: 6.922
+  esindex: 0.007
+  LoadShardBlock: 81.083 (3)
+  PetaboxLoader3.datanode: 103.498 (5)
+  load_resource: 106.652
+  PetaboxLoader3.resolve: 71.674
+  loaddict: 21.308
+*/
